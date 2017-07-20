@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>float</title>
+	<style>
+		div{
+			width: 200px;
+			height: 200px;
+			background: green;
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div>div1</div>
+	<div>div2</div>
+	<div>div3</div>
+	<!-- 
+		元素浮动的顺序是按照html布局顺序依次浮动
+		所以当3个div元素右浮动后会先浮动div1依次类推
+	 -->
+
+	<!-- 
+		float:left|right|none|inherit
+
+
+		1.文档流:
+		文档流是文档中可现实对象在排列时所占用的位置
+
+		2.浮动的定义:是元素脱离文档流，按照指定的方向发生移动，遇到父级边界或者相邻的浮动元素停下来
+
+		clear:left|right|both|none|inherit
+		元素的某个方向不能有浮动元素
+		clear:both  在元素的左右两侧均不能有浮动元素
+	 -->
+</body>
+</html>

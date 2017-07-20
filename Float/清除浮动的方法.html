@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>清除浮动的方法</title>
+	<style>
+		 .box{
+		 	border: 1px solid red;
+
+		 }
+		 .item{
+		 	width: 200px;
+		 	height: 200px;
+		 	background: black;
+		 	float: left;
+		 }
+		 .clearFix:after{
+		 	content: '';
+		 	display: block;
+		 	clear: both;
+		 }
+		 .clearFix{
+		 	*zoom: 1;
+		 }
+	</style>
+</head>
+<body>
+	<!-- 
+		需要清除浮动的原因:
+		浮动的破坏性
+		由于元素设置浮动后脱离文档流提升半层层级导致位置父元素高度塌陷
+	 -->
+	 <div class="box clearFix">
+	 	<div class="item"></div>
+	 </div>
+	 <!-- 
+		清除浮动的方法:
+		1.给父元素增加高度高度与浮动内容的高度相同
+		不适用于高度不固定的元素
+
+		2.给父级也加浮动
+		问题:导致给页面中的所有的元素都要添加浮动是margin的左右auto效果失效
+
+		3.给父级设置display:inline-block
+		问题:margin左右auto失效
+
+		4.空标签清除浮动元素(空标签的样式为clear:both)并且空标签与浮动元素同级
+		问题:IE6下最小高度问题解决后还会有2px的偏差
+
+		5.br清除浮动  br标签有一个属性clear  值为all
+		问题:影响解构样式行为三者分离的要求
+
+		6.给父级元素添加after伪类由4和5可知空标签和br都是块元素 有益after伪类的效果也应该是块元素  content的内容设置为空然后两边clear
+		伪类就是给某一个元素添加特殊的效果
+
+		7.overflow:hidden清除浮动
+		问题:需要配合 宽度 或者zoom兼容到IE 6 7
+	  -->
+</body>
+</html>
