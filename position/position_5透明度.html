@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>透明度</title>
+	<style>
+		#div1{
+			width: 500px;
+			height: 500px;
+			background-color: blue;
+			color: white;
+			font-size: 48px;
+			opacity: 0.5;
+		}
+		div{
+			width: 300px;
+			height: 300px;
+		}
+		.box{
+			
+			margin: 100px auto;
+			background-color: green;
+			position: relative;
+			top: 0;
+		}
+		.content{
+			background: yellow;
+			position: absolute;
+			top: -6px;
+			left: -6px;
+			z-index: 2;
+		}
+		.mark{
+			background-color: #000;
+			opacity: 0.4;
+			position: absolute;
+			bottom: -6px;
+			right: -6px;
+			z-index: 1;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">你好你好你好你好你好你好你好</div>
+	<!-- 
+		透明苏opacity：一旦父级增加了透明度子集也会继承父级的透明度属性
+		1不透明
+		0完全透明
+
+		IE6不支持opacity属性
+		IE使用的是filter:alpha(50);
+	 -->
+	 <div class="box">
+	 	<div class="content"></div>
+	 	<div class="mark"></div>
+	 </div>
+</body>
+</html>
