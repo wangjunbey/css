@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>表格</title>
+	<style>
+		table{
+			border-collapse: collapse;
+		}
+		td{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<table  border="1" width="800" align="center" cellpadding="20">
+		<thead>
+			<tr>
+				<th  colspan="2">星期一</th>
+				<th>星期二</th>
+				<th>星期三</th>
+				<th>星期四</th>
+
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td rowspan="2">javascript</td>
+				<td>javascript</td>
+				<td>javascript</td>
+				<td>javascript</td>
+				<td>javascript</td>
+			</tr>
+			<tr>
+				<td>javascript</td>
+				<td>javascript</td>
+				<td>javascript</td>
+				<td>javascript</td>
+				
+			</tr>
+			<tr>
+				<td>javascript</td>
+				<td>javascript</td>
+				<td>javascript</td>
+				<td>javascript</td>
+				<td>javascript</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr></tr>
+		</tfoot>
+	</table>
+
+	<!-- 
+		1.表格的边框应该直接嫁给table标签 border属性 不应该在表格的css设置
+		2.合并单元格之间的间隙样式为tbale{border-collapse:collapse}
+		3.th td 有默认的padding 需要清除或者是重新设置
+		4.单元格的合并多列合并使用colspan 多行合并使用rowspan  需要在相应的单元格进行属性的设置 值为数字没有单位
+		5.表格的整体宽度应该在border标签上设置width或者height属性
+		6.表格的位置应该使用属性align进行设置
+		7.表格单元边界与单元内容之间的间距为cellpadding属性
+	 -->
+</body>
+</html>
